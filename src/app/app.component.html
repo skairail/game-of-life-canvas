@@ -1,0 +1,28 @@
+<div class="toolbar">
+  <div class="left">
+    <button (click)="toggleRunning()">
+      {{ running ? "Pause" : "Run" }}
+    </button>
+    <button (click)="step()" [disabled]="running">Step</button>
+    <button (click)="randomizeGrid()">Randomize</button>
+    <button (click)="clearGrid()">Clear</button>
+  </div>
+
+  <div class="right">
+    <label>
+      Speed: {{ tickMs }} ms
+      <input
+        type="range"
+        min="1"
+        max="1000"
+        step="1"
+        [value]="tickMs"
+        (input)="onTickChange($event)"
+      />
+    </label>
+    <span>Generation: {{ generation }}</span>
+    <span>{{ rows }} × {{ cols }}</span>
+  </div>
+</div>
+
+<canvas #canvas width="720" height="480" class="game-canvas"></canvas>

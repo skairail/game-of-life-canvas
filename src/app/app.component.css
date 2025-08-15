@@ -1,0 +1,46 @@
+:host {
+  display: block;
+  background: #111827;
+  color: #e5e7eb;
+  font-family: sans-serif;
+  height: 100vh;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: #0b1220;
+  border-bottom: 1px solid #1f2937;
+}
+
+.toolbar .left,
+.toolbar .right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+button {
+  background: #1f2937;
+  color: #e5e7eb;
+  border: 1px solid #374151;
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #273244;
+}
+
+input[type="range"] {
+  vertical-align: middle;
+}
+
+.game-canvas {
+  display: block;
+  margin: 1rem auto;
+  background: #0f172a;
+  image-rendering: pixelated;
+}
